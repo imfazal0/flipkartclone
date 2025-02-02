@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="icon" type="image/png" href="images/Flipkart-Logo-removebg-preview.png">
+
+</head>
+<body>
+    <section class="header">
+        <div class="logo">
+            <img src="images/fllogo.svg" alt="">
+        </div>
+    </section>
+    <section class="cart-sec">
+        <div style="min-height: 100; overflow: hidden; margin-top: 100px;">
+
+            <div class="cart-page"> 
+                <div class="empty-cart"></div>
+                
+            </div>
+            <div class="del-div"> 
+                <button class=" del-all-button" onclick="
+                // deleting every item from cart array
+                    cart =[]
+                    // console.log(cart);
+                    localStorage.setItem('cart',JSON.stringify(cart))
+                    cartfun()
+                    ">Remove-all-item
+                     </button>
+            </div>
+        </div>
+        <div class="delivery-method">
+            <label> Cart Invoice</label>
+            <div class="cart-value">
+                <div>Total Cart Value : </div>
+                <div class="cart-value-1" style="font-weight: bold; color: green;"></div>
+            </div>
+            <div class="dilivery-charge">
+                <div>Dilivery Charge : </div>
+                <div class="dilivery-charge-1"  style="font-weight: bold; color: green;"></div>
+            </div>
+            <div class="payable-amount">
+                <div>Total Payable Amount : </div>
+                <div class="payable-amount-1"  style="font-weight: bold; color: green;"> </div>
+            </div>
+            <div class="payment-method">
+                <div class="">
+                    <select id="Select Payment Method" >
+                        <option value="" disabled selected>Select Payment Method</option>
+                            <option>PayPal</option>
+                            <option>UPI</option>
+                            <option>Credi/Debit Card</option>
+                            <option>Bank Transfer</option>
+                            <option>EMI</option>
+                            <option>Cash On Delivery</option>
+                            <option>Gift Card</option>
+                        
+                    </select>
+                </div>
+                <div>
+                    <button class="place-order"> Place Order </button>
+                </div>
+            </div>
+            <div style="width: 100%; overflow: hidden;">
+                <img src="/images/Ekart-Logistics.jpg" alt="" width="100%">
+            </div>
+            <div class="address">
+                
+                Deliver to<br>
+                Mohd Fazal , 113 , New Rama city block 1.2<br>
+                near rakesh mishthan bhandar <br>
+                Ayodhya , 256001 , UP , India <br>
+            </div> 
+        </div>
+    </section>
+ 
+    <script src="cart.js"  ></script>
+    <script src="product.js"  ></script>
+</body>
+</html>
